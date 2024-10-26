@@ -3,42 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لعبة الضغط</title>
     <link rel="stylesheet" href="style.css">
-    <title>لعبة النقاط</title>
 </head>
 <body>
-    <h1>اختر دولتك</h1>
-    <select id="countrySelect">
-        <option value="الأردن">الأردن</option>
-        <option value="فلسطين">فلسطين</option>
-        <option value="السعودية">السعودية</option>
-        <option value="مصر">مصر</option>
-        <option value="المغرب">المغرب</option>
-        <option value="العراق">العراق</option>
-        <option value="الجزائر">الجزائر</option>
-        <option value="تونس">تونس</option>
-        <option value="ليبيا">ليبيا</option>
-        <option value="لبنان">لبنان</option>
-        <option value="سوريا">سوريا</option>
-        <option value="السودان">السودان</option>
-        <option value="اليمن">اليمن</option>
-        <option value="عمان">عمان</option>
-        <option value="الكويت">الكويت</option>
-        <option value="البحرين">البحرين</option>
-        <option value="قطر">قطر</option>
-    </select>
-    <button id="startButton">ابدأ اللعب</button>
-    
-    <div id="leaderboard" style="display: none;">
-        <h2>لوحة المتصدرين</h2>
-        <div id="scores"></div>
-        <button id="viewPointsButton">زيارة النقاط</button>
-    </div>
+    <div class="container">
+        <h1>اختر دولتك</h1>
+        <select id="countrySelect">
+            <option value="الأردن">الأردن</option>
+            <option value="فلسطين">فلسطين</option>
+            <option value="مصر">مصر</option>
+            <option value="السعودية">السعودية</option>
+            <option value="الإمارات">الإمارات</option>
+            <option value="الكويت">الكويت</option>
+            <option value="البحرين">البحرين</option>
+            <option value="قطر">قطر</option>
+            <option value="عمان">عمان</option>
+            <option value="المغرب">المغرب</option>
+            <option value="الجزائر">الجزائر</option>
+            <option value="تونس">تونس</option>
+            <option value="ليبيا">ليبيا</option>
+            <option value="اليمن">اليمن</option>
+            <option value="السودان">السودان</option>
+            <option value="العراق">العراق</option>
+            <option value="لبنان">لبنان</option>
+            <option value="سوريا">سوريا</option>
+            <option value="جزر القمر">جزر القمر</option>
+        </select>
+        <button id="startButton">ابدأ اللعب</button>
+        <button id="leaderboardButton">لوحة المتصدرين</button>
+        
+        <div id="gameArea" style="display:none;">
+            <h2>العب الآن في <span id="selectedCountry"></span></h2>
+            <button id="pressButton">اضغط هنا لزيادة النقاط</button>
+            <button id="backButton">العودة إلى لوحة المتصدرين</button>
+            <p id="scoreDisplay">النقاط: 0</p>
+        </div>
 
-    <div id="gameArea" style="display: none;">
-        <h2>اضغط لزيادة النقاط</h2>
-        <button id="pressButton">اضغط هنا</button>
-        <button id="backButton">رجوع إلى لوحة المتصدرين</button>
+        <div id="leaderboard" style="display:none;">
+            <h2>لوحة المتصدرين</h2>
+            <table id="leaderboardTable">
+                <thead>
+                    <tr>
+                        <th>الدولة</th>
+                        <th>النقاط</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- سيتم إضافة البيانات هنا -->
+                </tbody>
+            </table>
+            <button id="backToMenuButton">العودة إلى القائمة الرئيسية</button>
+        </div>
     </div>
 
     <script src="script.js"></script>
